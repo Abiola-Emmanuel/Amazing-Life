@@ -72,11 +72,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <FiX
+          className='close-icon'
+          onClick={toggleMenu}
+        />
         <div className="menu-content">
-          <FiX
-            className='close-icon'
-            onClick={toggleMenu}
-          />
           {navLinks.map((link) => (
             <Link
               key={link.id}
