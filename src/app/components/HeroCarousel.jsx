@@ -5,12 +5,13 @@ import Link from 'next/link'
 import { FaLocationArrow } from "react-icons/fa6";
 import { FaQuoteRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, EffectFade } from 'swiper/modules'
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules'
 import { useState, useEffect } from 'react';
 import './hero-carousel.css'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
+import 'swiper/css/pagination'
 
 const HeroCarousel = () => {
 
@@ -65,9 +66,9 @@ const HeroCarousel = () => {
   ]
 
   return (
-    <>
+    <div className='hero-wrapper'>
       <Swiper
-        modules={[Autoplay, EffectFade]}
+        modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
         loop={true}
         speed={2000}
@@ -75,6 +76,10 @@ const HeroCarousel = () => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true
         }}
         className="hero-swiper"
       >
@@ -84,7 +89,7 @@ const HeroCarousel = () => {
               src={slide.src}
               alt={slide.subtitle}
               fill
-              className="hero-image"
+              className="hero-image parallax"
               priority={index === 0}
               sizes="100vw"
             />
@@ -111,7 +116,12 @@ const HeroCarousel = () => {
         </div>
       </div>
 
-    </>
+      <div className="scroll-indicator">
+        <span>Scroll</span>
+        <div className="scroll-line"></div>
+      </div>
+
+    </div>
   )
 }
 
