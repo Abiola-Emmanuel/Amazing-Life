@@ -57,7 +57,7 @@ const HeroCarousel = () => {
     },
     {
       src: '/hero-3.jpg',
-      subtitle: 'Faith • Family • Fellowship',
+      subtitle: 'Faith, Family, Fellowship',
       description: 'Discover your purpose, build meaningful relationships, and walk your journey of faith with us.',
       buttonText: 'Get Involved',
       link: '/ministries'
