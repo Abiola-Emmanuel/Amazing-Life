@@ -101,7 +101,10 @@ const MainBody = () => {
             fill
             className="media-card-image"
           />
-          <div className="media-text"></div>
+          <div className="media-text">
+            <h3>Bible Study</h3>
+            <p>Study guides, and devotionals </p>
+          </div>
         </div>
 
         <div className="media-card">
@@ -112,7 +115,10 @@ const MainBody = () => {
             fill
             className="media-card-image"
           />
-          <div className="media-text"></div>
+          <div className="media-text">
+            <h3>Sermons</h3>
+            <p>Watch live sermons and teachings</p>
+          </div>
         </div>
 
         <div className="media-card">
@@ -123,7 +129,51 @@ const MainBody = () => {
             fill
             className="media-card-image"
           />
-          <div className="media-text"></div>
+          <div className="media-text">
+            <h3>Worship Music</h3>
+            <p>Experience uplifting worship music</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="join">
+        <Image
+          src={'/join-bg.jpg'}
+          fill
+          alt="Join Us Background"
+          className="join-bg"
+        />
+        <div className="join-overlay"></div>
+        <div className="join-text">
+          <h2>Join Amazing Life Family and grow with us now</h2>
+
+          <div className="join-actions">
+            <Link href="/contact" className="join-link1">Contact Us <FaLocationArrow /></Link>
+            <Link href="/welcome" className="join-link2">New Here?</Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="ministries">
+        <div className="min-top">
+          <h3>MINISTRIES</h3>
+          <h2 className="title">There is a place for everyone</h2>
+        </div>
+
+        <div className="min-cards">
+          <div className="min-card">
+            <div className="min-overlay"></div>
+
+          </div>
+          <div className="min-card">
+            <div className="min-overlay"></div>
+
+          </div>
+          <div className="min-card">
+            <div className="min-overlay"></div>
+
+          </div>
         </div>
 
       </div>

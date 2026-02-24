@@ -81,6 +81,15 @@ const HeroCarousel = () => {
           clickable: true,
           dynamicBullets: true
         }}
+        onSlideChange={() => {
+          const progressBar = document.querySelector('.progress-bar-fill');
+          if (progressBar) {
+            progressBar.style.animation = 'none';
+            setTimeout(() => {
+              progressBar.style.animation = 'progressShrink 2.5s linear forwards';
+            }, 10);
+          }
+        }}
         className="hero-swiper"
       >
         {slides.map((slide, index) => (
@@ -89,7 +98,7 @@ const HeroCarousel = () => {
               src={slide.src}
               alt={slide.subtitle}
               fill
-              className="hero-image parallax"
+              className="hero-image"
               priority={index === 0}
               sizes="100vw"
             />
@@ -107,6 +116,10 @@ const HeroCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="progress-bar">
+        <div className="progress-bar-fill"></div>
+      </div>
 
       <div className="verse-container">
         <div className="verse-content">
