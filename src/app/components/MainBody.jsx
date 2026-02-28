@@ -164,14 +164,56 @@ const MainBody = () => {
         <div className="min-cards">
           <div className="min-card">
             <div className="min-overlay"></div>
+            <Image
+              src={'/women-min.jpg'}
+              alt="Min-image"
+              fill
+              className="min-image"
+            />
+            <div className="min-text">
+              <h2>Queens</h2>
+              <p>Women ministry</p>
+            </div>
+          </div>
+          <div className=" min-card">
+            <div className="min-overlay"></div>
+            <Image
+              src={'/min-kids.jpg'}
+              alt="Min-image"
+              fill
+              className="min-image"
+            />
+            <div className="min-text">
+              <h2>J-Squad Children</h2>
+              <p>Children ministry</p>
+            </div>
+          </div>
+          <div className="min-card">
+            <div className="min-overlay"></div>
+            <Image
+              src={'/teens-min.jpg'}
+              alt="Min-image"
+              fill
+              className="min-image"
+            />
+            <div className="min-text">
+              <h2>J-Squad Teens</h2>
+              <p>Amazing Life Teens</p>
+            </div>
 
           </div>
           <div className="min-card">
             <div className="min-overlay"></div>
-
-          </div>
-          <div className="min-card">
-            <div className="min-overlay"></div>
+            <Image
+              src={'/men-min.jpg'}
+              alt="Min-image"
+              fill
+              className="min-image"
+            />
+            <div className="min-text">
+              <h2>Kings </h2>
+              <p>Men's Ministry</p>
+            </div>
 
           </div>
         </div>
