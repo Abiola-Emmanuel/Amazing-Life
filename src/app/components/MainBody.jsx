@@ -185,7 +185,12 @@ const MainBody = () => {
             />
             <div className="min-text">
               <h2>J-Squad Children</h2>
-              <p>Children ministry</p>
+              <Link
+                href={'/'}
+                className="min-link"
+              >
+                Children ministry
+              </Link>
             </div>
           </div>
           <div className="min-card">
@@ -198,7 +203,12 @@ const MainBody = () => {
             />
             <div className="min-text">
               <h2>J-Squad Teens</h2>
-              <p>Amazing Life Teens</p>
+              <Link
+                href={'/'}
+                className="min-link"
+              >
+                Amazing Life Teens
+              </Link>
             </div>
 
           </div>
@@ -212,7 +222,12 @@ const MainBody = () => {
             />
             <div className="min-text">
               <h2>Kings </h2>
-              <p>Men&apos;s Ministry</p>
+              <Link
+                href={'/'}
+                className="min-link"
+              >
+                Men&apos;s Ministry
+              </Link>
             </div>
 
           </div>
