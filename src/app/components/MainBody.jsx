@@ -212,7 +212,7 @@ const MainBody = () => {
             />
             <div className="min-text">
               <h2>Kings </h2>
-              <p>Men's Ministry</p>
+              <p>Men&apos;s Ministry</p>
             </div>
 
           </div>
