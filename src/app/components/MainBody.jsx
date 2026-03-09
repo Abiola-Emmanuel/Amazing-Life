@@ -5,236 +5,299 @@ import { FaLocationDot, FaBookBible } from "react-icons/fa6";
 import { LuHeartHandshake } from "react-icons/lu";
 import { FaLocationArrow } from "react-icons/fa6";
 import { RiLiveFill } from "react-icons/ri";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { BsMusicNoteBeamed } from "react-icons/bs";
+import { MdArrowForward } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import './main-body.css'
-
+import Footer from "./Footer";
 
 const MainBody = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="believe">
-      <div className="believe-text">
-        <h2>A Community Anchored in Christ,
-          <span>United in Love </span> for People</h2>
-
-        <p>Transformed by the gift of salvation, we exist to worship authentically, strengthen the local church, and advance God’s Kingdom across the earth. Rooted in biblical truth, we are committed to building a Christ-centered community where lives are renewed, faith is strengthened, and hope is shared with our city and beyond.</p>
-      </div>
-
-      <div className="action-cards">
-
-        <div className="action-card">
-          <FaLocationDot className="action-icon" />
-          <h3>Find Us</h3>
-          <p>We welcome you to experience the warmth of our church family and grow in faith together.</p>
-          <Link href="/contact" className="action-link">Get Directions</Link>
-        </div>
-
-        <div className="action-card">
-          <IoMdTime className="action-icon" />
-          <h3>Service Times</h3>
-          <p>Join us for worship every Sunday at 10:00 AM. Experience uplifting music, inspiring messages, and a welcoming community.</p>
-          <Link href="/services" className="action-link">View Service Times</Link>
-        </div>
-
-        <div className="action-card">
-          <LuHeartHandshake className="action-icon" />
-          <h3>New Here?</h3>
-          <p>Don&apos;t know where to start? Were here to help you feel at home. Visit our welcome desk or contact us for more information.</p>
-          <Link href="/welcome" className="action-link">Learn More</Link>
-        </div>
-
-      </div>
-
-      <div className="about">
-
-        <div className="about-left">
-
-          <h2><span className="dot"></span> About Us</h2>
-
-          <h2 className="gospel">We are a gospel centered, presence driven church.</h2>
-
-          <p className="devoted">
-            A church devoted to nurturing Christ-centered families, equipping faithful disciples, and impacting our community through the love of Jesus.
+    <div className="main-body">
+      {/* Hero Belief Section */}
+      <section className="believe-section">
+        <div className="believe-text animate-fade-up">
+          <h2>
+            A Community Anchored in Christ,
+            <span className="highlight"> United in Love </span>
+            for People
+          </h2>
+          <p className="belief-description">
+            Transformed by the gift of salvation, we exist to worship authentically,
+            strengthen the local church, and advance God's Kingdom across the earth.
+            Rooted in biblical truth, we are committed to building a Christ-centered
+            community where lives are renewed, faith is strengthened, and hope is
+            shared with our city and beyond.
           </p>
-
-          <Link href="/about" className="about-link">Learn More <FaLocationArrow className="arrow-icon" />
-          </Link>
         </div>
+      </section>
 
-        <div className="about-right">
-          <Image
-            src="/woman1-sing.jpg"
-            alt="Woman"
-            fill
-            className="about-image"
-          />
-        </div>
+      {/* Action Cards with Icons */}
+      <section className="action-cards-section">
+        <div className="action-cards">
+          <div className="action-card animate-on-scroll">
+            <div className="card-icon-wrapper">
+              <FaLocationDot className="action-icon" />
+            </div>
+            <h3>Find Us</h3>
+            <p>We welcome you to experience the warmth of our church family and grow in faith together.</p>
+            <Link href="/contact" className="action-link">
+              Get Directions <MdArrowForward className="link-arrow" />
+            </Link>
+          </div>
 
-      </div>
+          <div className="action-card animate-on-scroll delay-1">
+            <div className="card-icon-wrapper">
+              <IoMdTime className="action-icon" />
+            </div>
+            <h3>Service Times</h3>
+            <p>Join us for worship every Sunday at 10:00 AM. Experience uplifting music and inspiring messages.</p>
+            <Link href="/services" className="action-link">
+              View Times <MdArrowForward className="link-arrow" />
+            </Link>
+          </div>
 
-      <div className="watch">
-        <div className="watch-top">
-          <FaBookBible className="watch-icon" />
-        </div>
-
-        <div className="watch-bottom">
-          <h3>POWERFUL & LIFE-CHANGING</h3>
-
-          <h2>Watch Us <span className="live-dot"></span> <span style={{ color: 'red' }}>Live</span></h2>
-
-          <p>Join us as we dive into God’s Word, discovering <br /> practical truths for everyday life.</p>
-        </div>
-
-        <div className="watch-link">
-          <Link href="/watch" className="watch-link-text">Watch Now <RiLiveFill className="watch-link-icon" />
-          </Link>
-        </div>
-      </div>
-
-      <div className="media">
-
-        <div className="media-card">
-          <div className="media-overlay"></div>
-          <Image
-            src='/bible.jpg'
-            alt="Media Image"
-            fill
-            className="media-card-image"
-          />
-          <div className="media-text">
-            <h3>Bible Study</h3>
-            <p>Study guides, and devotionals </p>
+          <div className="action-card animate-on-scroll delay-2">
+            <div className="card-icon-wrapper">
+              <LuHeartHandshake className="action-icon" />
+            </div>
+            <h3>New Here?</h3>
+            <p>Don't know where to start? We're here to help you feel at home and find your place.</p>
+            <Link href="/welcome" className="action-link">
+              Learn More <MdArrowForward className="link-arrow" />
+            </Link>
           </div>
         </div>
+      </section>
 
-        <div className="media-card">
-          <div className="media-overlay"></div>
-          <Image
-            src='/sermon.png'
-            alt="Media Image"
-            fill
-            className="media-card-image"
-          />
-          <div className="media-text">
-            <h3>Sermons</h3>
-            <p>Watch live sermons and teachings</p>
+      {/* About Section with Better Layout */}
+      <section className="about-section">
+        <div className="about-container">
+          <div className="about-left animate-slide-right">
+            <div className="section-tag">
+              <span className="dot"></span>
+              <span>About Us</span>
+            </div>
+            <h2 className="gospel-title">
+              We are a gospel centered, <span className="highlight">presence driven</span> church.
+            </h2>
+            <p className="about-description">
+              A church devoted to nurturing Christ-centered families, equipping faithful disciples,
+              and impacting our community through the love of Jesus.
+            </p>
+            <Link href="/about" className="about-link">
+              Discover Our Story <FaLocationArrow className="arrow-icon" />
+            </Link>
           </div>
-        </div>
 
-        <div className="media-card">
-          <div className="media-overlay"></div>
-          <Image
-            src='/music.jpg'
-            alt="Media Image"
-            fill
-            className="media-card-image"
-          />
-          <div className="media-text">
-            <h3>Worship Music</h3>
-            <p>Experience uplifting worship music</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="join">
-        <Image
-          src={'/join-bg.jpg'}
-          fill
-          alt="Join Us Background"
-          className="join-bg"
-        />
-        <div className="join-overlay"></div>
-        <div className="join-text">
-          <h2>Join Amazing Life Family and grow with us now</h2>
-
-          <div className="join-actions">
-            <Link href="/contact" className="join-link1">Contact Us <FaLocationArrow /></Link>
-            <Link href="/welcome" className="join-link2">New Here?</Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="ministries">
-        <div className="min-top">
-          <h3>MINISTRIES</h3>
-          <h2 className="title">There is a place for everyone</h2>
-        </div>
-
-        <div className="min-cards">
-          <div className="min-card">
-            <div className="min-overlay"></div>
-            <Image
-              src={'/women-min.jpg'}
-              alt="Min-image"
-              fill
-              className="min-image"
-            />
-            <div className="min-text">
-              <h2>Queens</h2>
-              <p>Women ministry</p>
+          <div className="about-right animate-slide-left">
+            <div className="image-wrapper">
+              <Image
+                src="/woman1-sing.jpg"
+                alt="Worship at King's Throne"
+                fill
+                className="about-image"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
-          <div className=" min-card">
-            <div className="min-overlay"></div>
-            <Image
-              src={'/min-kids.jpg'}
-              alt="Min-image"
-              fill
-              className="min-image"
-            />
-            <div className="min-text">
-              <h2>J-Squad Children</h2>
-              <Link
-                href={'/'}
-                className="min-link"
-              >
-                Children ministry
+        </div>
+      </section>
+
+      {/* Live Watch Section */}
+      <section className="watch-section">
+        <div className="watch-container">
+          <div className="watch-content">
+            <FaBookBible className="section-icon" />
+            <span className="watch-tag">POWERFUL & LIFE-CHANGING</span>
+            <h2 className="watch-title">
+              Watch Us <span className="live-badge">LIVE</span>
+            </h2>
+            <p className="watch-description">
+              Join us as we dive into God's Word, discovering practical truths for everyday life.
+            </p>
+            <Link href="/watch" className="watch-button">
+              Watch Now <RiLiveFill className="watch-icon" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Media Cards Section */}
+      <section className="media-section">
+        <div className="media-grid">
+          <div className="media-card animate-on-scroll">
+            <div className="media-image-wrapper">
+              <Image
+                src='/bible.jpg'
+                alt="Bible Study"
+                fill
+                className="media-image"
+              />
+              <div className="media-overlay"></div>
+            </div>
+            <div className="media-text">
+              <h3>Bible Study</h3>
+              <p>Study guides & devotionals</p>
+            </div>
+          </div>
+
+          <div className="media-card animate-on-scroll delay-1">
+            <div className="media-image-wrapper">
+              <Image
+                src='/sermon.png'
+                alt="Sermons"
+                fill
+                className="media-image"
+              />
+              <div className="media-overlay"></div>
+            </div>
+            <div className="media-text">
+              <h3>Sermons</h3>
+              <p>Watch live sermons & teachings</p>
+            </div>
+          </div>
+
+          <div className="media-card animate-on-scroll delay-2">
+            <div className="media-image-wrapper">
+              <Image
+                src='/music.jpg'
+                alt="Worship Music"
+                fill
+                className="media-image"
+              />
+              <div className="media-overlay"></div>
+            </div>
+            <div className="media-text">
+              <h3>Worship Music</h3>
+              <p>Experience uplifting worship</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Section */}
+      <section className="join-section">
+        <div className="join-container">
+          <Image
+            src={'/join-bg.jpg'}
+            fill
+            alt="Join Our Church Family"
+            className="join-bg"
+          />
+          <div className="join-overlay"></div>
+          <div className="join-content">
+            <h2 className="join-title">
+              Join Our Amazing Church Family and <span className="highlight">Grow With Us</span>
+            </h2>
+            <div className="join-buttons">
+              <Link href="/contact" className="join-button-primary">
+                Contact Us <MdArrowForward />
+              </Link>
+              <Link href="/welcome" className="join-button-secondary">
+                New Here? Get Started
               </Link>
             </div>
           </div>
-          <div className="min-card">
-            <div className="min-overlay"></div>
-            <Image
-              src={'/teens-min.jpg'}
-              alt="Min-image"
-              fill
-              className="min-image"
-            />
-            <div className="min-text">
-              <h2>J-Squad Teens</h2>
-              <Link
-                href={'/'}
-                className="min-link"
-              >
+        </div>
+      </section>
+
+      {/* Ministries Section */}
+      <section className="ministries-section">
+        <div className="ministries-header">
+          <span className="section-subtitle">MINISTRIES</span>
+          <h2 className="section-title">There's a place for everyone</h2>
+        </div>
+
+        <div className="ministries-grid">
+          <div className="ministry-card animate-on-scroll">
+            <div className="ministry-image-wrapper">
+              <Image
+                src={'/women-min.jpg'}
+                alt="Women's Ministry"
+                fill
+                className="ministry-image"
+              />
+              <div className="ministry-overlay"></div>
+            </div>
+            <div className="ministry-text">
+              <h3>Queens</h3>
+              <Link href="/ministries/women" className="ministry-link">
+                Women's Ministry
+              </Link>
+            </div>
+          </div>
+
+          <div className="ministry-card animate-on-scroll delay-1">
+            <div className="ministry-image-wrapper">
+              <Image
+                src={'/min-kids.jpg'}
+                alt="Children's Ministry"
+                fill
+                className="ministry-image"
+              />
+              <div className="ministry-overlay"></div>
+            </div>
+            <div className="ministry-text">
+              <h3>J-Squad Children</h3>
+              <Link href="/ministries/children" className="ministry-link">
+                Children's Ministry
+              </Link>
+            </div>
+          </div>
+
+          <div className="ministry-card animate-on-scroll delay-2">
+            <div className="ministry-image-wrapper">
+              <Image
+                src={'/teens-min.jpg'}
+                alt="Teen Ministry"
+                fill
+                className="ministry-image"
+              />
+              <div className="ministry-overlay"></div>
+            </div>
+            <div className="ministry-text">
+              <h3>J-Squad Teens</h3>
+              <Link href="/ministries/teens" className="ministry-link">
                 Amazing Life Teens
               </Link>
             </div>
-
           </div>
-          <div className="min-card">
-            <div className="min-overlay"></div>
-            <Image
-              src={'/men-min.jpg'}
-              alt="Min-image"
-              fill
-              className="min-image"
-            />
-            <div className="min-text">
-              <h2>Kings </h2>
-              <Link
-                href={'/'}
-                className="min-link"
-              >
-                Men&apos;s Ministry
+
+          <div className="ministry-card animate-on-scroll delay-3">
+            <div className="ministry-image-wrapper">
+              <Image
+                src={'/men-min.jpg'}
+                alt="Men's Ministry"
+                fill
+                className="ministry-image"
+              />
+              <div className="ministry-overlay"></div>
+            </div>
+            <div className="ministry-text">
+              <h3>Kings</h3>
+              <Link href="/ministries/men" className="ministry-link">
+                Men's Ministry
               </Link>
             </div>
-
           </div>
         </div>
+      </section>
 
-      </div>
-
+      <Footer />
     </div>
   )
 }
