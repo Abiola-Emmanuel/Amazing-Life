@@ -110,7 +110,6 @@ const MainBody = () => {
                 alt="Worship at King's Throne"
                 fill
                 className="about-image"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

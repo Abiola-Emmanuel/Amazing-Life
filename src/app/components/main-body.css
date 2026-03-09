@@ -773,6 +773,12 @@ section {
     gap: 40px;
   }
 
+  .about-left,
+  .about-right {
+    flex: 1;
+    width: 100%;
+  }
+
   .image-wrapper {
     height: 400px;
   }
@@ -829,8 +835,13 @@ section {
     font-size: 1.8rem;
   }
 
+  .about-right {
+    width: 100%;
+  }
+
   .image-wrapper {
     height: 300px;
+    width: 100%;
   }
 
   .watch-title {
