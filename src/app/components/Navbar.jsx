@@ -34,8 +34,8 @@ const Navbar = () => {
   const ministries = [
     { id: 1, name: 'Children Ministry', href: '/ministries/children' },
     { id: 2, name: 'Teens Ministry', href: '/ministries/amazing-life-teens' },
-    { id: 3, name: "Men's Ministry", href: '/ministries/mens' },
-    { id: 4, name: "Women's Ministry", href: '/ministries/womens' }
+    { id: 3, name: "Men's Ministry", href: '/ministries/men' },
+    { id: 4, name: "Women's Ministry", href: '/ministries/women' }
   ]
 
 

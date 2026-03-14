@@ -54,14 +54,14 @@ const HeroCarousel = () => {
       subtitle: 'Modern Worship, Timeless Truth',
       description: 'Experience powerful worship, practical teaching, and a welcoming church family.',
       buttonText: 'Join US',
-      link: '/services'
+      link: '/about'
     },
     {
       src: '/hero-3.jpg',
       subtitle: 'Faith, Family, Fellowship',
       description: 'Discover your purpose, build meaningful relationships, and walk your journey of faith with us.',
       buttonText: 'Get Involved',
-      link: '/ministries'
+      link: '/ministries/men'
     }
   ]
 

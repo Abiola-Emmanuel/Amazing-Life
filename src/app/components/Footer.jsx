@@ -51,7 +51,11 @@ const Footer = () => {
 
             <div className="footer-info-item">
               <FaPhone className="footer-icon" />
-              <p className="footer-info-text">+2341234567891</p>
+              <Link
+                href='tel:+2341234567891'
+                className="footer-info-text" style={{ color: 'white' }}
+              >+2341234567891
+              </Link>
             </div>
 
             <div className="footer-info-item">

@@ -1,0 +1,401 @@
+.women-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.women-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.women-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.women-text {
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease forwards;
+  margin-top: 50px;
+}
+
+.women-badge {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
+}
+
+.women-text h1 {
+  color: #fff;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.women-text h1 .highlight {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  z-index: 1;
+}
+
+.women-text p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.women-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.women-btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid #fff;
+  text-decoration: none;
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.women-btn:hover {
+  background: #0b1d67;
+  border-color: #0b1d67;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(11, 29, 103, 0.4);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.women-intro {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+  margin: auto;
+}
+
+.women-intro .strong {
+  text-align: center;
+  font-size: 20px;
+}
+
+.women-intro .women {
+  text-align: center;
+  font-size: 50px;
+}
+
+.introduction {
+  display: flex;
+  gap: 20px;
+}
+
+.introduction-left,
+.introduction-right {
+  width: 50%;
+  height: 600px;
+  position: relative;
+}
+
+.introduction-left {
+  padding: 20px;
+}
+
+.scripture {
+  font-style: italic;
+  color: #0b1d67;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.women-description {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.women-description h2 {
+  font-size: 50px;
+}
+
+.women-description strong {
+  color: #0b1d67;
+}
+
+.ministry-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-right-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.goal-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 100px auto 0px auto;
+  padding: 40px 20px;
+}
+
+.goal-subtitle {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #0b1d67;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.goal-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.goal-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+}
+
+.goal-text strong {
+  color: #0b1d67;
+}
+
+.highlight {
+  color: #0b1d67;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(11, 29, 103, 0.2);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.goal-badge {
+  background: #0b1d67;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.goal-verse {
+  display: block;
+  margin-top: 30px;
+  font-style: italic;
+  color: #0b1d67;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.benefits {
+  width: 90%;
+  margin: 100px auto;
+  /* border: 2px solid green; */
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ben-left,
+.ben-right {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ben-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.benefits-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  object-position: right;
+}
+
+.ben-right h2 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.ben-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.ben-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ben-item::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -10;
+  width: 90%;
+  height: 0.5px;
+  background: #0b1d67;
+  border-radius: 3px;
+}
+
+.check-icon {
+  color: white;
+  background-color: #0b1d67;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+
+  .women-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .women-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .women-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 12px 28px;
+  }
+
+  .introduction {
+    flex-direction: column;
+  }
+
+  .introduction-left,
+  .introduction-right {
+    width: 100%;
+  }
+
+  .benefits {
+    flex-direction: column;
+  }
+
+  .ben-left,
+  .ben-right {
+    width: 100%;
+    height: 600px;
+  }
+
+  .benefits-bg {
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .women-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .women-text p {
+    font-size: 1rem;
+  }
+
+  .women-badge {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}

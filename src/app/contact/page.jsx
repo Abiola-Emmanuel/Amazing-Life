@@ -107,7 +107,7 @@ const Contact = () => {
           <div className="social-links">
             <h3>Follow Us</h3>
             <div className="social-icons">
-              <Link href="#" target="_blank">
+              <Link href="https://www.tiktok.com/@alpjsquad1?is_from_webapp=1&sender_device=pc" target="_blank">
                 <FaTiktok />
               </Link>
             </div>
@@ -138,7 +138,8 @@ const Contact = () => {
       {/* Map Section */}
       <div className="map-section" id='map-section'>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.2729440321305!2d7.0132446!3d4.7622764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cbe4f983de27%3A0xd6be63dcc917a45c!2s15%20Harbour%20Rd%2C%20Port%20Harcourt%2C%20Onne%20501101%2C%20Rivers!5e0!3m2!1sen!2sng!4v1717590000000!5m2!1sen!2sng"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.768706737792!2d7.0119424!3d4.7621005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cbe4f8d6fe71%3A0xbd915863850bc089!2s13%20Harbour%20Rd%2C%20Port%20Harcourt%2C%20500101%2C%20Rivers!5e0!3m2!1sen!2sng!4v1717690000000!5m2!1sen!2sng"
+
           allowFullScreen
           loading="lazy"
           title="Church Location"
