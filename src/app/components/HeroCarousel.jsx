@@ -117,10 +117,6 @@ const HeroCarousel = () => {
         ))}
       </Swiper>
 
-      <div className="progress-bar">
-        <div className="progress-bar-fill"></div>
-      </div>
-
       <div className="verse-container">
         <div className="verse-content">
           <FaQuoteRight className="verse-quote-icon" />

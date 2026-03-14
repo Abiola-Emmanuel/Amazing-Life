@@ -49,6 +49,7 @@
   display: flex;
   gap: 20px;
   z-index: 3;
+  margin-bottom: 40px;
   flex-direction: column;
   width: 550px;
   align-items: flex-start;
