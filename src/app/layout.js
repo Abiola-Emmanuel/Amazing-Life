@@ -19,8 +19,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: "AMAZING LIFE PARISH",
-  description: "Welcome to Amazing Life Parish website",
+  title: "AMAZING LIFE PARISH AREA HEADQUATERS",
+  description: "The Place Where God Dwells",
 };
 
 export default function RootLayout({ children }) {

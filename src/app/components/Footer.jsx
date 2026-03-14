@@ -17,7 +17,8 @@ const Footer = () => {
               height={100}
               alt='RCCG LOGO'
             />
-            <p className="footer-tagline">RCCG, AMAZING LIFE</p>
+            <p className="footer-tagline">The Reedemed christian church God</p>
+            <p>Amazing Life Parish Area Headquaters</p>
           </div>
 
           {/* Contact the Church Section */}
@@ -26,6 +27,7 @@ const Footer = () => {
             <p className="footer-description">
               Have questions or need support? Reach out to RCCG, Amazing Life and we'll be happy to assist you.
             </p>
+
             <Link href="/contact" className="footer-button-link">
               <button className="footer-button">Contact Us</button>
             </Link>
@@ -43,7 +45,7 @@ const Footer = () => {
             <div className="footer-info-item">
               <FaMapMarkerAlt className="footer-icon" />
               <p className="footer-info-text">
-                Harbour Road
+                13 Harbour Road, Port Harcourt, Rivers State
               </p>
             </div>
 
@@ -60,7 +62,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="footer-nav">
+        {/* <div className="footer-nav">
           <Link href="/" className="footer-nav-link">Home</Link>
           <span className="footer-nav-separator">•</span>
           <Link href="/about" className="footer-nav-link">About</Link>
@@ -70,11 +72,11 @@ const Footer = () => {
           <Link href="/events" className="footer-nav-link">Events</Link>
           <span className="footer-nav-separator">•</span>
           <Link href="/contact" className="footer-nav-link">Contact Us</Link>
-        </div>
+        </div> */}
 
         {/* Copyright */}
         <div className="footer-copyright">
-          <p>2026 - All Rights Reserved</p>
+          <p> {new Date().getFullYear()} - All Rights Reserved</p>
         </div>
       </div>
     </footer>

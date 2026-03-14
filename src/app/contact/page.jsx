@@ -73,29 +73,36 @@ const Contact = () => {
         <div className="contact-info">
           <h2>Visit Us</h2>
 
-          <div className="info-card">
+          <Link
+            href={'#map-section'}
+            className="info-card">
             <FaMapMarkerAlt className="info-icon" />
             <div>
               <h3>Location</h3>
-              <p></p>
+              <p>13 Harbour Road, Port Harcourt, Rivers State</p>
             </div>
-          </div>
+          </Link>
 
-          <div className="info-card">
+          <Link
+            href="tel:+2341234567891"
+            className="info-card">
             <FaPhone className="info-icon" />
             <div>
               <h3>Phone</h3>
-              <p></p>
+              <p>2341234567891</p>
             </div>
-          </div>
+          </Link>
 
-          <div className="info-card">
+          <Link
+            href="mailto:amazinglife@gmail.com"
+            className="info-card"
+          >
             <FaEnvelope className="info-icon" />
             <div>
               <h3>Email</h3>
               <p>amazinglife@gmail.com</p>
             </div>
-          </div>
+          </Link>
 
           <div className="social-links">
             <h3>Follow Us</h3>
@@ -129,7 +136,7 @@ const Contact = () => {
       </div>
 
       {/* Map Section */}
-      <div className="map-section">
+      <div className="map-section" id='map-section'>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.2729440321305!2d7.0132446!3d4.7622764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cbe4f983de27%3A0xd6be63dcc917a45c!2s15%20Harbour%20Rd%2C%20Port%20Harcourt%2C%20Onne%20501101%2C%20Rivers!5e0!3m2!1sen!2sng!4v1717590000000!5m2!1sen!2sng"
           allowFullScreen
