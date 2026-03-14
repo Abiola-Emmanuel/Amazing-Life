@@ -20,25 +20,17 @@ const Footer = () => {
             <p className="footer-tagline">RCCG, AMAZING LIFE</p>
           </div>
 
-          {/* Stay Connected Section */}
-          {/* <div className="footer-section">
-            <h3 className="footer-title">Stay Connected</h3>
-            <p className="footer-description">
-              Sign up with your email address to receive updates from RCCG, King's Throne
-            </p>
-            <form className="footer-form">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="footer-input"
-              />
-              <button type="submit" className="footer-button">Subscribe</button>
-            </form>
-          </div> */}
-
-          {/* Contact Section */}
+          {/* Contact the Church Section */}
           <div className="footer-section">
-            <h3 className="footer-title">Contact</h3>
+            <h3 className="footer-title">Contact Amazing Life</h3>
+            <p className="footer-description">
+              Have questions or need support? Reach out to RCCG, Amazing Life and we'll be happy to assist you.
+            </p>
+            <Link href="/contact" className="footer-button-link">
+              <button className="footer-button">Contact Us</button>
+            </Link>
+          </div>
+          <div className="footer-section">
 
             <div className="footer-info-item">
               <FaClock className="footer-icon" />
