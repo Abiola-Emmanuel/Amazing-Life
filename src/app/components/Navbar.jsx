@@ -9,6 +9,7 @@ import './navbar.css';
 const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,6 +31,14 @@ const Navbar = () => {
     { id: 5, name: 'Contact Us', href: '/contact' },
   ]
 
+  const ministries = [
+    { id: 1, name: 'Children Ministry', href: '/ministries/children' },
+    { id: 2, name: 'Teens Ministry', href: '/ministries/amazing-life-teens' },
+    { id: 3, name: "Men's Ministry", href: '/ministries/mens' },
+    { id: 4, name: "Women's Ministry", href: '/ministries/womens' }
+  ]
+
+
   return (
     <>
       <nav>
@@ -47,13 +56,32 @@ const Navbar = () => {
 
         <div className="nav-mid">
           {navLinks.map((link) => (
-            <Link
+            <div
               key={link.id}
-              href={link.href}
-              className='link'
+              className="nav-link-wrapper"
+              onMouseEnter={() => setActiveLink(link.id)}
+              onMouseLeave={() => setActiveLink(null)}
             >
-              {link.name}
-            </Link>
+              <Link
+                href={link.href}
+                className='link'
+              >
+                {link.name}
+              </Link>
+              {link.name === 'Ministries' && activeLink === 3 && (
+                <div className={'ministries-dropdown'}>
+                  {ministries.map((ministry) => (
+                    <Link
+                      key={ministry.id}
+                      href={ministry.href}
+                      className='link'
+                    >
+                      {ministry.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
@@ -78,14 +106,29 @@ const Navbar = () => {
         />
         <div className="menu-content">
           {navLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={link.href}
-              className='mobile-link'
-              onClick={toggleMenu}
-            >
-              {link.name}
-            </Link>
+            <div key={link.id}>
+              <Link
+                href={link.href}
+                className='mobile-link'
+                onClick={link.name === 'Ministries' ? () => setActiveLink(activeLink === 3 ? null : 3) : toggleMenu}
+              >
+                {link.name}
+              </Link>
+              {link.name === 'Ministries' && activeLink === 3 && (
+                <div className={'mobileministries-dropdown'}>
+                  {ministries.map((ministry) => (
+                    <Link
+                      key={ministry.id}
+                      href={ministry.href}
+                      className='mobile-link'
+                      onClick={toggleMenu}
+                    >
+                      {ministry.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>

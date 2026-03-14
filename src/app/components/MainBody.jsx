@@ -24,7 +24,6 @@ const MainBody = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 }
