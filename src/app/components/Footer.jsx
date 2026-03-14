@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="footer-info-item">
               <FaMapMarkerAlt className="footer-icon" />
               <p className="footer-info-text">
-                Address goes here
+                Harbour Road
               </p>
             </div>
 
